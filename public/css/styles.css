@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(248, 242, 229, 0.747);
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+
+nav,
+.offcanvas {
+  background-color: #1b772c;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.brand img{
+    width: 115px;
+    height: 75px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav > li:hover {
+    background-color: #70b48b;
+  }
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(38, 45, 246);
+  }
+
+h5 {
+  color: rgb(236, 161, 22);
+}
+  
+  .bg-main {
+    background-color: #398838 !important;
+  }
+  
+  
+  .card-txt-category {
+    color: #a9c0c0;
+    font-size: 12px;
+  }
+  
+  .card-txt-author {
+    color: #2b2622;
+    font-size: 14px;
+  }
+  
+  .card-txt-date {
+    color: #1d5d1d;
+    font-size: 14px;
+  }
+  
+  .card {
+    box-shadow: 1px 1px 5px 1px rgba(240, 119, 43, 0.87);
+    border-radius: 1.25rem;
+  }
+  
+  .card .card-img-top {
+    border-top-left-radius: calc(1.25rem - 1px);
+    border-top-right-radius: calc(1.25rem - 1px);
+  }
+  
+  .card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+  }
+  
+
+  .title-cards{
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #353232;
+  }
+
+  /*===================SLIDER DE IMAGENES==========================*/
+.carousel-inner {
+  max-height:30rem !important;
+}
+
+/*===================GALERÍA==============0*/
+
+.container-img{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+}
+.container-img .box-img figure{
+  width: 100%;
+  height: 100%;
+}
+.container-img .box-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-img .box-img:nth-child(1){
+  grid-column-start: span 2;
+}
+.container-img .box-img:nth-child(4){
+  grid-row-start: span 2;
+}
+@media screen and (max-width:800px){
+  .container-img{
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+  }
+  .container-img .box-img:nth-child(1){
+    grid-column-start: span 1;
+  }
+}
+@media screen and (max-width:500px){
+  .container-img{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-img .box-img img{
+    height: 200px;
+  }
+}
+
+/*===========================SECCION ubicacion==================================*/
+#numeros-local{
+  margin:0 !important;
+  padding:0 !important;
+}
+#numeros-local div {
+  padding: 0 20px 0 0;
+  text-align:left;
+  height:48px;
+}
+
+#numeros-local div:not(:last-child) {
+  border-right: 2px solid #3f3f3f;
+}
+#numeros-local div:not(:first-child) {
+  padding-left:20px;
+}
+
+#numeros-local p{
+  margin:0;
+}
+
+/*===================SECCION NUESTRO EQUIPO MAPA==========================*/
+#local {
+  margin-top:50px;
+  background-color: #f3f3f3;
+  display:flex;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+
+.mapa {
+  width:100%;
+  height:500px;
+}
+
+.wrapper-local {
+  width:50%;
+  margin-left:100px;
+  padding-top:150px;
+}
+
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width:1200px){
+  #intro, #equipo {
+    width:90% !important;
+    margin:auto;
+  }
+
+  #local {
+    flex-wrap: wrap;
+    padding-top:30px;
+  }
+  .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;
+  }
+
+}
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+
+@media (max-width:768px) {
+
+  #intro, #equipo{
+    width:90% !important;
+    margin:auto;
+  }
+
+
+  #img-equipo{
+    max-height:20rem !important;
+    width:90%;
+  }
+  .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;
+  }
+  #local {
+    flex-wrap: wrap;
+  }
+  .mapa img {
+    width:100%;
+    height:auto;
+  }
+  #bg-contactos{
+    top: -120px;
+  }
+
+
+}
+/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+
+@media (max-width: 576px) {
+  #servicios-fila-2 {
+    width:100% !important;
+  }
+  #servicios-fila-1 {
+    width:100% !important;
+  }
+
+  .icono-wrap{
+    flex-wrap:wrap !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+}
